@@ -95,7 +95,7 @@ for (i in pets){
 
 //ATIVIDADE 02: IMPRIMIR O RELATÓRIO A PARTIR DE ITERAÇÃO DO LAÇO
 
-for (i in pets){    
+for (let i in pets){    
     console.log("Pet: "+pets[i].nome)
     console.log(pets[i])
 }
@@ -103,9 +103,27 @@ for (i in pets){
 //ATIVIDADE 03: CRIAR UMA FUNÇÃO QUE RECEBA COMO PARAMETRO UM OBJETO E DEVOLVA UMA STRING DO RELATÓRIO COM OS DADOS DO OBJETO
 
 function relatorioString (paciente){    
-    
-    console.log(texto)     
+    let petString = ""
+    for (let chave in paciente){    
+        petString+=`${chave}: ${paciente[chave]}\n`
+    }
+    return petString
+}
+for (pet of pets){  
+    console.log(relatorioString(pet))
 }
 
-relatorioString(pets)
+//ATIVIDADE 04: 
+
+function filtro (pacientes,nomePet) {  
+    for (let paciente of pacientes){    
+        if (paciente["nome"]=== nomePet){   
+            return paciente
+        }
+    }
+    alert("Pet não encontrado.")
+}
+
+console.log(filtro(pets,"Toquinho"))
+
 
