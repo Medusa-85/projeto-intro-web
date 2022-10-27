@@ -60,7 +60,7 @@ const pet4 = {
 
 const pet5 = {  
     tutor: "Ariel Fajardini",
-    nome: "Dom Juan Corleone",
+    nome: "Don Juan Corleone",
     tipo: "Felino",
     raca: "SRD",
     cor: "preto e branco",
@@ -94,18 +94,19 @@ for (i in pets){
 }
 
 //ATIVIDADE 02: IMPRIMIR O RELATÓRIO A PARTIR DE ITERAÇÃO DO LAÇO
-
+console.log("#### Atividade 2 ####")
 for (let i in pets){    
     console.log("Pet: "+pets[i].nome)
     console.log(pets[i])
 }
 
 //ATIVIDADE 03: CRIAR UMA FUNÇÃO QUE RECEBA COMO PARAMETRO UM OBJETO E DEVOLVA UMA STRING DO RELATÓRIO COM OS DADOS DO OBJETO
+console.log("#### Atividade 3 ####")
 
 function relatorioString (paciente){    
     let petString = ""
     for (let chave in paciente){    
-        petString+=`${chave}: ${paciente[chave]}\n`
+        petString += `${chave}: ${paciente[chave]}\n`
     }
     return petString
 }
@@ -114,6 +115,9 @@ for (pet of pets){
 }
 
 //ATIVIDADE 04: 
+console.log("#### Atividade 4 ####")
+
+const nomePet = prompt("Digite o nome do seu pet.")
 
 function filtro (pacientes,nomePet) {  
     for (let paciente of pacientes){    
@@ -124,6 +128,6 @@ function filtro (pacientes,nomePet) {
     alert("Pet não encontrado.")
 }
 
-console.log(filtro(pets,"Toquinho"))
+console.log(filtro(pets,nomePet))
 
 

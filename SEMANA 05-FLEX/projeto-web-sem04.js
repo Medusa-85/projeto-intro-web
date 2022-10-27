@@ -1,10 +1,10 @@
 //PROJETO INTRODUÇÃO A WEB
 
-// SEMANA 02
+// SEMANA 03
 
 // ITEM: ANIMAIS PACIENTES DE UMA CLÍNICA VETERINÁRIA
 
-// ATIVIDADE 01: TRASNFORMAR OS ITENS CRIADOS NA SEMANA 01 EM OBJETOS
+// ATIVIDADE 01: REESCREVER O RELATÓRIO DE FORMA QUE A PROPRIEDADE QUE É ORIGINALMENTE UM ARRAY SEJA ESCRITA EM UMA MESMA STRING.
 
 const pet1 = {  
     tutor: "Clara Bernardes",
@@ -60,13 +60,13 @@ const pet4 = {
 
 const pet5 = {  
     tutor: "Ariel Fajardini",
-    nome: "Dom Juan Corleone",
+    nome: "Don Juan Corleone",
     tipo: "Felino",
     raca: "SRD",
     cor: "preto e branco",
     idade: 9,
     castrado: true,
-    vacinado: false,
+    vacinado: true,
     peso: 5,
     prescricao : ["Drontal"]
 }
@@ -84,25 +84,50 @@ const pet6 = {
     prescricao : ["Drontal"]
 }
 
-//ATIVIDADE 02: CRIAR UM ARRAY PARA GUARDAR OS OBJETOS DA ATIVIDADE 01
-
 const pets = []
 
-//ATIVIDADE 03: ADICIONE OS OBJETOS AO ARRAY DA ATIVIDADE 02
-
 pets.push(pet1, pet2, pet3, pet4, pet5, pet6)
-console.log(pets)
 
-//ATIVIDADE 04: Altere o item 3 “Adicione os novos objetos no array de objetos, utilizando o push()”, para criar uma verificação antes de dar o push. A caraterística booleana do objeto deve ser validada. Isto é, o objeto só deve ser adicionado ao array se a propriedade booleana for true
-//ATIVIDADE 05: Crie uma condição else, que, em caso de valor false na condição acima, exiba um **ALERT** avisando para o usuário que o item não foi adicionado, e não faça o push
-const petsCastrados = []
-
-for (let petCastrado of pets){    
-    if(petCastrado.castrado){  
-        petsCastrados.push(petCastrado)   
-    }else{  
-        alert("O pet " + petCastrado.nome + " não é castrado.")
-    }
+for (i in pets){  
+    pets[i].prescricao=pets[i].prescricao.toString()
+    console.log(pets[i].prescricao)
 }
-console.log(petsCastrados)
+
+//ATIVIDADE 02: IMPRIMIR O RELATÓRIO A PARTIR DE ITERAÇÃO DO LAÇO
+console.log("#### Atividade 2 ####")
+for (let i in pets){    
+    console.log("Pet: "+pets[i].nome)
+    console.log(pets[i])
+}
+
+//ATIVIDADE 03: CRIAR UMA FUNÇÃO QUE RECEBA COMO PARAMETRO UM OBJETO E DEVOLVA UMA STRING DO RELATÓRIO COM OS DADOS DO OBJETO
+console.log("#### Atividade 3 ####")
+
+function relatorioString (paciente){    
+    let petString = ""
+    for (let chave in paciente){    
+        petString += `${chave}: ${paciente[chave]}\n`
+    }
+    return petString
+}
+for (pet of pets){  
+    console.log(relatorioString(pet))
+}
+
+//ATIVIDADE 04: 
+// console.log("#### Atividade 4 ####")
+
+// const nomePet = prompt("Digite o nome do seu pet.")
+
+// function filtro (pacientes,nomePet) {  
+//     for (let paciente of pacientes){    
+//         if (paciente["nome"]=== nomePet){   
+//             return paciente
+//         }
+//     }
+//     alert("Pet não encontrado.")
+// }
+
+// console.log(filtro(pets,nomePet))
+
 
