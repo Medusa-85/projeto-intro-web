@@ -1,0 +1,348 @@
+*{  
+    padding: 0;
+    margin: 0;  
+} 
+body{   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./papel4.jpg);
+    
+}  
+header{ 
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(82, 41, 12) 2px;
+    background-color: rgb(226, 217, 217);
+    height: 20vh;
+    width: 90vw;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    margin: 10px;
+
+}
+main{   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+label{  
+    background-color: rgba(240, 248, 255, 0);
+}
+h1,h3{
+    color: rgb(80,43,43);
+    background-color: rgba(240, 248, 255, 0);
+    text-shadow: 2px 2px 2px rgb(86, 81, 81);
+}
+nav{    
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    column-gap: 10px;
+    background-color: rgb(202, 188, 188);
+    margin: 10px;
+    padding: 5px;
+    height: 40px;
+    width: 30vw;
+    border-radius: 3px;
+}
+div{    
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
+}
+li{
+    text-align: center;
+    list-style: none;
+}
+.pet-da-lista{   
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center; 
+    flex-direction: column;
+    column-gap: 50px;
+    border: solid rgb(82, 41, 12) 2px;
+    border-radius: 5px;
+    background-color: rgb(233, 222, 222);
+    color: rgb(80,43,43);
+    row-gap: 5px;
+    margin: 10px;
+    width: 45vw;
+    height: auto;
+}
+img{    
+    
+    height: 15em;
+    width: 15em;
+    border-radius: 100%;
+    object-fit: cover;
+    padding: 1em;
+    /*max-width: 100%;
+    max-height: 100%;*/ 
+}
+
+footer{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+    width: 90%;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: rgb(189, 166, 166);
+    color: rgb(82, 41, 12);
+    
+}
+
+
+@media screen and (min-device-width: 1200) {
+    header{ 
+        display: flex;
+        flex-direction: column;
+        border: solid rgb(82, 41, 12) 2px;
+        background-color: rgb(226, 217, 217);
+        height: 20vh;
+        width: 45vw;
+        border-radius: 7px;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        margin: 10px;
+    
+    }
+    main{   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    label{  
+        background-color: rgba(240, 248, 255, 0);
+    }
+    h1,h3{
+        color: rgb(80,43,43);
+        background-color: rgba(240, 248, 255, 0);
+        text-shadow: 2px 2px 2px rgb(86, 81, 81);
+    }
+    nav{    
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        column-gap: 10px;
+        background-color: rgb(202, 188, 188);
+        margin: 10px;
+        padding: 5px;
+        height: 40px;
+        width: 30vw;
+        border-radius: 3px;
+    }
+    div{    
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        justify-content: flex-start;
+    }
+    li{
+        text-align: center;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+    }
+    .pet-da-lista{   
+        display: flex; 
+        justify-content: flex-start;
+        align-items: center; 
+        flex-direction: column;
+        column-gap: 50px;
+        row-gap: 5px;
+        border: solid rgb(82, 41, 12) 2px;
+        border-radius: 5px;
+        background-color: rgb(233, 222, 222);
+        color: rgb(80,43,43);
+        margin: 10px;
+        width: 45vw;
+        height: 50vh;
+    }
+    img{    
+        
+        height: 100%;
+        width: 100%;
+        max-width: 272px;
+        max-height: 272px;
+        border-radius: 100%;
+        object-fit: cover;
+        padding: 1em;
+        
+    }
+    footer{ 
+        height: 30%;
+        width: 90%;
+        padding: 10px;
+        border-radius: 7px;
+        background-color: rgb(189, 166, 166);
+        color: rgb(82, 41, 12);
+        
+    }
+}
+
+@media screen and (min-device-width : 481px) and (max-device-width : 1199px) {
+    nav{
+        display: flex;
+        flex-direction: column ;
+        justify-content:center;
+        align-items:center;
+        row-gap: 5px;
+        /* background-color: rgb(202, 188, 188);
+        margin: 10px;
+        padding: 5px;
+        border-radius: 3px; */
+        height: auto;
+        width: auto;
+        
+    }
+    header {
+        height: 10vh;
+        width: 45vw;
+    }
+    .pet-da-lista {
+        height: 40vh;
+    }
+    h1{
+        font-size: 5vw;
+        text-shadow: 1px 1px 1px rgb(86, 81, 81);
+    }
+    h3{
+        font-size: 2.5vw;
+        text-shadow: 1px 1px 1px rgb(86, 81, 81);
+    }
+    img{    
+        
+        height: 100%;
+        width: 100%;
+        max-width: 192px;
+        max-height: 192px;
+        border-radius: 100%;
+        object-fit: cover;
+        padding: 1em;
+        
+    }
+    li {
+        text-align: center;
+        height: 18px;
+        font-size: 14px;    
+    }
+    h2{
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (min-device-width : 330px) and (max-device-width : 480px){
+    .pet-da-lista { 
+        height: 32vh;
+    }
+    header {
+        height: 9vh;
+        width: 60vw;
+    }
+    h1{
+        font-size: 5vw;
+        text-shadow: 1px 1px 1px rgb(86, 81, 81);
+    }
+    h3{
+        font-size: 2.5vw;
+        text-shadow: 1px 1px 1px rgb(86, 81, 81);
+    }
+    nav{
+        display: flex;
+        flex-direction: column ;
+        justify-content:center;
+        align-items:center;
+        row-gap: 5px;
+        background-color: rgb(202, 188, 188);
+        margin: 10px;
+        padding: 5px;
+        border-radius: 3px;
+        height: auto;
+        width: auto;
+        
+    }
+    img{    
+        
+        height: 100%;
+        width: 100%;
+        max-width: 130px;
+        max-height: 130px;
+        border-radius: 100%;
+        object-fit: cover;
+        padding: 1em;
+        
+    }
+    li {
+        text-align: center;
+        height: 14px;
+        font-size: 12px;    
+    }
+    h2{
+        text-align: center;
+        font-size: 14px;
+    }
+}
+@media screen and (max-device-width : 329px) {
+    .pet-da-lista { 
+        height: 32vh;
+    }
+    header {
+        height: 7vh;
+        width: 60vw;
+    }
+    h1{
+        font-size: 5vw;
+        text-shadow: 1px 1px 1px rgb(86, 81, 81);
+    }
+    h3{
+        font-size: 2.5vw;
+        text-shadow: 0.5px 0.5px 0.5px rgb(86, 81, 81);
+    }
+    nav{
+        display: flex;
+        flex-direction: column ;
+        justify-content:center;
+        align-items:center;
+        row-gap: 3px;
+        background-color: rgb(202, 188, 188);
+        margin: 10px;
+        padding: 5px;
+        border-radius: 3px;
+        height: auto;
+        width: auto;
+        
+    }
+    img{    
+        
+        height: 100%;
+        width: 100%;
+        max-width: 110px;
+        max-height: 110px;
+        border-radius: 100%;
+        object-fit: cover;
+        padding: 1em;
+        
+    }
+    li {
+        text-align: center;
+        height: 16px;
+        font-size: 12px;    
+    }
+    h2{
+        text-align: center;
+        font-size: 14px;
+    }
+}
